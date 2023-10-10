@@ -1,2 +1,2 @@
 // script.js
-var update = "Aggiornato il 08/10/23 17:04";
+var update = "Aggiornato il 10/10/2023 22:04;
