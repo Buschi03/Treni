@@ -2,9 +2,31 @@
     <head>
         <title>Treni</title>
         <!--meta http-equiv="refresh" content="0; URL=WiP.html"--> <!--Cambia il commento per il WiP-->
-        <meta http-equiv="refresh" content="0; URL=sciopero.html">
+        <meta http-equiv="refresh" content="5; URL=index2.html">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <!--input type="button" value="Indietro" onClick="history.go(-1);return true;" name="button"--> 
+        <!--input type="button" value="Indietro" onClick="history.go(-1);return true;" name="button"-->
+        Aggiornato il 19/10/2023 alle 10:15 <br> <br>
+        Variazioni controllate il 23/10/2023 alle 07:20 <br> <br>
+        Verrai reindirizzato tra
+        <div id="countdown"> 5</div>
+
+         <script>
+            let seconds = 5;
+            const countdown = document.getElementById("countdown");
+
+            const updateCountdown = () => {
+            countdown.innerText = seconds;
+            seconds--;
+
+            if (seconds < 0) {
+                clearInterval(interval);
+            }
+            };
+
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+        </script>
     </body>
 </html>
