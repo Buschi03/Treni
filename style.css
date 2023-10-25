@@ -1,4 +1,5 @@
 body{
+    width: 100%;
     text-align: center;
     font-size: 40pt;
 }
@@ -13,7 +14,7 @@ button{
 
 table {
     border-collapse: collapse;
-    width: 50%;
+    width: 100%;
     margin: auto;
     font-size: 40pt;
 }
