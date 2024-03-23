@@ -4,11 +4,34 @@
         <link rel="icon" href="img/88.ico" type="image/x-icon">
         <link rel="shortcut icon" href="img/88.ico" type="image/x-icon">
         <title>Loading...</title>
-        <!--meta http-equiv="refresh" content="0; URL=ok.html"-->
-        <meta http-equiv="refresh" content="0; URL=home.html"-->
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <img src="img/loading.gif"> <br> Loading...
+        <script>
+            //Array per i vari redirect
+            var redirects=[
+                {start: '2024-03-22 00:00', end:'2024-03-24 22:01', url:'home_20240322.html'}
+            ]
+            //Funzione per reindirizzare in base all'intervallo di date e ora
+            function redirectBasedOnDateTimeRange(){
+                var currentDateTime = new Date().toISOString().slice(0,16).replace('T', ' '); //Ottieni la data nel formato corretto
+
+                //Cerca l'intervallo di date e ora corrente in redirects
+                for (var i = 0;i < redirects.length; i++){
+                    var redirect = redirects[i];
+                    if(currentDateTime >= redirect.start && currentDateTime <= redirect.end){
+                        window.location.href = redirect.url;
+                        return; //Termina la funzione effettuato il reindirizzamento
+                    }
+                }
+
+                //Se nessun intervallo corrisponde, reindirizza a ok.html
+                window.location.href = 'ok.html';
+            }
+
+            //Chiama la funzione
+            redirectBasedOnDateTimeRange();
+        </script>
     </body>
 </html>
