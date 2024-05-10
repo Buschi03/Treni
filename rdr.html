@@ -11,8 +11,9 @@
         <script>
             //Array per i vari redirect
             var redirects=[
-                {start: '2024-05-09 10:00', end:'2024-05-09 22:01', url:'WiP.html'}
-            ]
+                {start: '2024-05-09 10:00', end:'2024-05-20 03:01', url:'maggio_sciopero.html'},
+                {start: '2024-05-20 03:02', end: '2024-06-09 00:00', url:'maggio.html'}
+            ];
             //Funzione per reindirizzare in base all'intervallo di date e ora
             function redirectdasedOnDateTimeRange(){
                 var currentDateTime = new Date().toISOString().slice(0,16).replace('T', ' '); //Ottieni la data nel formato corretto
